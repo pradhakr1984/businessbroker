@@ -1,0 +1,32 @@
+name: daily-acquisition-agent
+on:
+  schedule:
+    - cron: "15 11 * * *"   # 07:15 ET daily; adjust
+  workflow_dispatch: {}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run agent
+        env:
+          IMAP_USERNAME: ${{ secrets.IMAP_USERNAME }}
+          IMAP_APP_PASSWORD: ${{ secrets.IMAP_APP_PASSWORD }}
+          IMAP_HOST: imap.gmail.com
+          IMAP_PORT: 993
+        run: |
+          python -m src.main --config agent_config.yaml
+      - name: Commit artifacts
+        run: |
+          git config user.name "agent-bot"
+          git config user.email "agent@example.com"
+          git add data/results.json data/results.md data/rejects.csv || true
+          git commit -m "daily update" || true
+          git push || true

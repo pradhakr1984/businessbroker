@@ -1,0 +1,21 @@
+# Center & radius
+center_address: "37 Warren Street, New York, NY 10007"
+radius_miles: 50
+
+# Filters
+price_usd_max: 5000000
+earnings_multiple_max: 5.0
+reason_for_sale_whitelist: ["retirement","succession","owner aging","transition after long tenure"]
+exclude_categories: ["restaurants","bars","cleaning services","high-turnover retail","salons/spas","gyms"]
+visit_frequency_allowlist: ["weekly","monthly"]
+employee_owned_preferred: true
+
+# IMAP label to fetch (must Show in IMAP)
+imap_label: "biz-acq/alerts"
+lookback_days: 2
+
+# Outputs
+outputs:
+  json_path: "data/results.json"
+  markdown_path: "data/results.md"
+  rejects_path: "data/rejects.csv"
