@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Acquisition Agent</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #ffd700;
+        }
+        .feature h3 {
+            margin: 0 0 10px 0;
+            color: #ffd700;
+        }
+        .code-block {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+        .github-link {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 10px 5px;
+            transition: transform 0.2s;
+        }
+        .github-link:hover {
+            transform: translateY(-2px);
+            background: #444;
+        }
+        .status {
+            text-align: center;
+            background: rgba(0, 255, 0, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+        .warning {
+            background: rgba(255, 165, 0, 0.2);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Business Acquisition Agent</h1>
+        
+        <div class="status">
+            <h3>✅ Deployment Successful!</h3>
+            <p>Your email-driven business acquisition pipeline is ready to use.</p>
+        </div>
+
+        <div class="warning">
+            <h3>⚠️ Command-Line Application</h3>
+            <p>This is a Python command-line tool designed to run locally. To use it, clone the repository and run it on your machine with your Gmail credentials.</p>
+        </div>
+
+        <div class="feature">
+            <h3>📧 Email-Driven Pipeline</h3>
+            <p>Automatically processes saved search alert emails from business broker platforms including BizQuest, LoopNet, DealStream, and BusinessBroker.com.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🔍 Smart Filtering</h3>
+            <p>Filters opportunities based on your criteria:</p>
+            <ul>
+                <li>Price under $5M</li>
+                <li>Within 50 miles of NYC</li>
+                <li>Earnings multiple ≤ 5x</li>
+                <li>Retirement-related sales</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>⚙️ Quick Setup</h3>
+            <p>Clone the repository and get started:</p>
+            <div class="code-block">
+git clone https://github.com/pradhakr1984/businessbroker.git<br>
+cd businessbroker<br>
+python -m venv .venv<br>
+source .venv/bin/activate<br>
+pip install -r requirements.txt<br>
+# Configure .env with Gmail credentials<br>
+python -m src.main --config agent_config.yaml
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>🛠️ Available Parsers</h3>
+            <ul>
+                <li><strong>BizQuest Parser</strong> - Handles BizQuest alert emails</li>
+                <li><strong>LoopNet Parser</strong> - Processes LoopNet listings</li>
+                <li><strong>DealStream Parser</strong> - Parses DealStream opportunities</li>
+                <li><strong>BusinessBroker Parser</strong> - Handles BusinessBroker.com alerts</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="https://github.com/pradhakr1984/businessbroker" class="github-link" target="_blank">
+                📚 View Source Code
+            </a>
+            <a href="https://github.com/pradhakr1984/businessbroker/blob/main/README.md" class="github-link" target="_blank">
+                📖 Read Documentation
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px; opacity: 0.8;">
+            <p>Built with Python • Email Processing • Business Intelligence</p>
+        </div>
+    </div>
+</body>
+</html>
