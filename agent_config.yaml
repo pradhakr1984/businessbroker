@@ -12,7 +12,7 @@ employee_owned_preferred: true
 
 # IMAP label to fetch (must Show in IMAP)
 imap_label: "biz-acq/alerts"
-lookback_days: 3
+lookback_days: 7
 
 # Outputs
 outputs:
