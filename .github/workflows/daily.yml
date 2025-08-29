@@ -2,11 +2,11 @@ name: daily-acquisition-agent
 
 on:
   schedule:
-    - cron: "15 11 * * *"     # 07:15 ET each day (keep or change)
-  workflow_dispatch: {}        # lets you run it manually
+    - cron: "15 11 * * *"
+  workflow_dispatch: {}
 
 permissions:
-  contents: write              # allow committing results back to the repo
+  contents: write
 
 jobs:
   run:
