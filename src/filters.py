@@ -1,4 +1,4 @@
-RETIREMENT_HINTS = ("retire","succession","aging","after","long tenure","transition")
+RETIREMENT_HINTS = ("retire","succession","transition","owner aging","after 30 years","handover")
 EXCLUDED_HINTS = ("restaurant","bar","cleaning","retail","salon","spa","gym")
 
 def standardize_reason(text:str) -> str:
