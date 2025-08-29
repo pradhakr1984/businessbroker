@@ -77,3 +77,18 @@ jobs:
           git add data/results.json data/results.md data/rejects.csv || true
           git commit -m "daily update" || true
           git push || true
+
+- name: IMAP smoke test (count emails in label)
+  env:
+    IMAP_USERNAME: ${{ secrets.IMAP_USERNAME }}
+    IMAP_APP_PASSWORD: ${{ secrets.IMAP_APP_PASSWORD }}
+    IMAP_HOST: imap.gmail.com
+    IMAP_PORT: 993
+  run: |
+    python - <<'PY'
+    import os
+    from src.email_imap import fetch_alert_emails
+    label = os.getenv("IMAP_LABEL","biz-acq/alerts")
+    emails = fetch_alert_emails(label=label, lookback_days=2)
+    print(f"IMAP OK. Label '{label}' has {len(emails)} message(s) in last 2 days.")
+    PY
