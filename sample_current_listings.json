@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Established Manufacturing Company - 25 Years",
+    "price": 2850000,
+    "cash_flow": 475000,
+    "earnings_multiple": 6.0,
+    "reason_for_sale": "Owner retirement after 25 successful years",
+    "location": "Westchester County, NY",
+    "category": "Manufacturing",
+    "source_url": "https://www.bizbuysell.com/businesses-for-sale/manufacturing-company-example",
+    "source_site": "bizbuysell",
+    "source_method": "manual_entry",
+    "date_added": "2025-09-03T18:15:00"
+  },
+  {
+    "name": "Professional Services Firm",
+    "price": 1200000,
+    "cash_flow": 280000,
+    "earnings_multiple": 4.3,
+    "reason_for_sale": "Succession planning - no family involvement",
+    "location": "Manhattan, NY",
+    "category": "Professional Services",
+    "source_url": "https://www.bizquest.com/businesses-for-sale/professional-services-example",
+    "source_site": "bizquest",
+    "source_method": "manual_entry",
+    "date_added": "2025-09-03T18:15:00"
+  },
+  {
+    "name": "Tech Distribution Business",
+    "price": 3200000,
+    "cash_flow": 580000,
+    "earnings_multiple": 5.5,
+    "reason_for_sale": "Owner aging, looking to retire",
+    "location": "Long Island, NY",
+    "category": "Technology Distribution",
+    "source_url": "https://www.dealstream.com/opportunities/tech-distribution-example",
+    "source_site": "dealstream",
+    "source_method": "manual_entry",
+    "date_added": "2025-09-03T18:15:00"
+  },
+  {
+    "name": "Boutique Restaurant Chain",
+    "price": 950000,
+    "cash_flow": 145000,
+    "earnings_multiple": 6.6,
+    "reason_for_sale": "Owner retirement",
+    "location": "Brooklyn, NY",
+    "category": "Restaurants",
+    "source_url": "https://www.bizbuysell.com/businesses-for-sale/restaurant-chain-example",
+    "source_site": "bizbuysell", 
+    "source_method": "manual_entry",
+    "date_added": "2025-09-03T18:15:00"
+  },
+  {
+    "name": "Medical Equipment Supplier",
+    "price": 4200000,
+    "cash_flow": 920000,
+    "earnings_multiple": 4.6,
+    "reason_for_sale": "Transition after long tenure",
+    "location": "New Jersey (near NYC)",
+    "category": "Medical Equipment",
+    "source_url": "https://www.bizquest.com/businesses-for-sale/medical-equipment-example",
+    "source_site": "bizquest",
+    "source_method": "manual_entry", 
+    "date_added": "2025-09-03T18:15:00"
+  }
+]

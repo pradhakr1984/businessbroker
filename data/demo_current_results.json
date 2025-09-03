@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Professional Services Firm",
+    "price": 1200000.0,
+    "cash_flow": 280000,
+    "earnings_multiple": 4.3,
+    "reason_for_sale": "retirement",
+    "location": "Manhattan, NY",
+    "category": "Professional Services",
+    "source_url": "https://example.com/listing2",
+    "source_site": "bizquest",
+    "source_method": "web_scrape",
+    "fetched_at_iso": "2025-09-03T22:13:02.889962+00:00"
+  },
+  {
+    "name": "Medical Equipment Supplier",
+    "price": 4200000.0,
+    "cash_flow": 920000,
+    "earnings_multiple": 4.6,
+    "reason_for_sale": "retirement",
+    "location": "New Jersey (near NYC)",
+    "category": "Medical Equipment",
+    "source_url": "https://example.com/listing5",
+    "source_site": "bizquest",
+    "source_method": "web_scrape",
+    "fetched_at_iso": "2025-09-03T22:13:02.889962+00:00"
+  }
+]
