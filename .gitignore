@@ -1,17 +1,17 @@
+# Python
 .venv/
 *.pyc
 __pycache__/
-.env
 *.log
+
+# Environment variables (keep private)
+.env
+.env.backup
+
+# System files
 .DS_Store
-data/results.json
-data/results.md
-data/rejects.csv
-.env
-.venv/
-__pycache__/
-*.pyc
-.env
-.venv/
-__pycache__/
-*.pyc
+
+# Allow data files to be committed (results should be public)
+# data/results.json
+# data/results.md  
+# data/rejects.csv
