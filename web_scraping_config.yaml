@@ -1,3 +1,6 @@
+# Configuration for web scraping mode
+# Copy of agent_config.yaml with web scraping enabled
+
 # Center & radius
 center_address: "37 Warren Street, New York, NY 10007"
 radius_miles: 50
@@ -10,38 +13,38 @@ exclude_categories: ["restaurants","bars","cleaning services","high-turnover ret
 visit_frequency_allowlist: ["weekly","monthly"]
 employee_owned_preferred: true
 
-# Data Sources - Enable/disable as needed
+# Data Sources - Web scraping enabled for testing
 sources:
-  # Email alerts (current method)
+  # Email alerts (disabled for pure web scraping test)
   email_alerts:
-    enabled: true
+    enabled: false
     imap_label: "biz-acq/alerts"
     lookback_days: 7
   
-  # Web scraping (new method for existing listings)
+  # Web scraping (enabled)
   web_scraping:
-    enabled: false  # Set to true to enable web scraping
+    enabled: true
     
     bizbuysell:
-      enabled: false
+      enabled: true
       search_url: "https://www.bizbuysell.com/businesses-for-sale/"
-      max_pages: 3
-      delay_seconds: 2
+      max_pages: 2  # Start small for testing
+      delay_seconds: 3  # Be respectful
     
     bizquest:
-      enabled: false
+      enabled: true
       search_url: "https://www.bizquest.com/businesses-for-sale/"
-      max_pages: 3
-      delay_seconds: 2
+      max_pages: 2
+      delay_seconds: 3
     
     dealstream:
-      enabled: false
+      enabled: false  # Can enable later
       search_url: "https://www.dealstream.com/opportunities/"
-      max_pages: 3
-      delay_seconds: 2
+      max_pages: 2
+      delay_seconds: 3
 
 # Outputs
 outputs:
-  json_path: "data/results.json"
-  markdown_path: "data/results.md"
-  rejects_path: "data/rejects.csv"
+  json_path: "data/web_scraping_results.json"
+  markdown_path: "data/web_scraping_results.md"
+  rejects_path: "data/web_scraping_rejects.csv"
