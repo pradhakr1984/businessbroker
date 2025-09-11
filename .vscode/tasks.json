@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🎯 Run Daily Acquisition Agent",
+            "type": "shell",
+            "command": "./daily_workflow.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [],
+            "detail": "Run the daily business acquisition agent and generate reports"
+        },
+        {
+            "label": "📧 Check Email Activity",
+            "type": "shell", 
+            "command": "source .venv/bin/activate && export $(cat .env | grep -v '^#' | xargs) && python check_email_activity.py",
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "detail": "Quick check of email activity from all platforms"
+        },
+        {
+            "label": "📊 Open Results Report",
+            "type": "shell",
+            "command": "open data/results.md || code data/results.md",
+            "group": "test",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent"
+            },
+            "problemMatcher": [],
+            "detail": "Open the latest results report"
+        }
+    ]
+}
